@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="app">
+            <h1>{{ title }}</h1>
+            <div class="buttons-box">
+                <button v-if="state === 'default'" @click="changeState('edit')">Add Item</button>
+                <button v-else @click="changeState('default')">Cancel</button>
+            </div>
+            <div v-if="state === 'edit'" class="input-box">
+                <input v-model="newItem" type="text" placeholder="Add new item" @keyup.enter="saveItem">
+                <button :disabled="newItem.length === 0" @click="saveItem">Save Item</button>
+            </div>
+
+            <ul class="shopping-list">
+                <li v-for="item in reverseArray" :class="{strikeout: item.purchased}" @click="toggleClass(item)">{{ item.label }}</li>
+                <p v-if="items.length === 0">Nice Job! You've bought all your items</p>
+            </ul>
+        </div>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

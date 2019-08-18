@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 5rem;
+    color: rgb(51, 50, 50);
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.header {
+    background: #66d2e3;
+    height: 100vh;
+    padding: 5% 10%;
+    position: relative;
+}
+
+.app {
+    margin: 0 auto;
+    padding: 5% 10%;
+    background-color: #fff;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+.input-box button {
+    height: 100%;
+}
+
+input[type=text] {
+    width: 70%;
+    height: 100%;
+    font-size: 2rem;
+}
+
+button {
+    width: 15%;
+}
+
+.shopping-list {
+    list-style: none;
+}
+
+.shopping-list li {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.buttons-box {
+    margin-bottom: 40px;
+}
+
+.buttons-box button {
+    height: 40px;
+}
+
+.strikeout {
+    text-decoration: line-through;
+    color: gray;
+}
